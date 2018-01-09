@@ -1,0 +1,126 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Randy Jimenez</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,400" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+              integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+              crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+                integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+                crossorigin=""></script>
+    </head>
+    <body onload="init()">
+
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+        <div class="flex-container">
+            <div id="leftContainer" >
+                <img src="img/img.jpg">
+            </div>
+            <div id="menu" class="vertical-flex">
+                <div><button title="Home" class="menuBtn" onclick="changeRightContainer('home')"><i class="fa fa-home" aria-hidden="true"></i></button></div>
+                <div><button title="Resume" class="menuBtn" onclick="changeRightContainer('profile')"><i class="fa fa-file-text-o" aria-hidden="true"></i></button></div>
+                <div><button title="About me" class="menuBtn" onclick="changeRightContainer('blog')"><i class="fa fa-user" aria-hidden="true"></i></button></div>
+                <div><button title="Location" class="menuBtn" onclick="changeRightContainer('map')"><i class="fa fa-map-marker" aria-hidden="true"></i></button></div>
+            </div>
+            <div id="rightContainer" >
+                <div id="rcTextBlock">
+                    <p id="name"><strong>Randy Jimenez</strong></p>
+                    <p>Web Developer</p>
+                    <hr>
+                    <p>I am a professional software developer with experience in Javascript with Angular 2 and Java</p>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i> 8035221424</p>
+                    <p><i class="fa fa-send" aria-hidden="true"></i> randyjimenez2010@gmail.com</p>
+                </div>
+                <div id="resumeTab">
+                    <object data="img/Synechron%20Candidate%20-%20Randy%20Jimenez.pdf">
+
+                    </object>
+                </div>
+                <div id="mapTab">
+                    <div id="mapid"></div>
+                </div>
+                <div id="blogTab">
+                    <h3>About me</h3>
+                    <div>Bacon ipsum dolor amet pork loin anim minim buffalo laboris aute eiusmod reprehenderit
+                        excepteur consectetur capicola laborum. Id brisket jowl, culpa pork chop doner cow bacon shankle
+                        pastrami swine ut tri-tip eu aliqua. In corned beef elit, duis short ribs tongue beef shank
+                        cupim. Beef ribs ham pork sunt hamburger lorem ipsum t-bone quis consequat excepteur dolor
+                        occaecat. In pig turducken nulla sausage. Occaecat incididunt nulla brisket id sirloin ribeye
+                        flank cillum chicken tongue cupidatat reprehenderit laborum. Jowl fatback mollit, non rump
+                        alcatra esse dolore ut buffalo tempor hamburger.
+                    </div>
+                    <div>Cillum magna occaecat, jerky ut shankle pancetta pig mollit meatball enim hamburger. Aute
+                        landjaeger chuck irure leberkas, voluptate swine ribeye bacon biltong magna. Eu sed burgdoggen,
+                        t-bone picanha beef aliquip consequat. Cupidatat ut shankle, boudin pancetta irure strip steak
+                        dolor. Ham lorem dolore ut corned beef beef ribs in jerky tenderloin shoulder sausage swine
+                        short loin capicola alcatra.
+                    </div>
+                    <div>Laborum veniam hamburger minim venison. Dolor veniam meatball jowl. Sunt velit cupidatat eu
+                        jowl ut filet mignon. Et jowl qui leberkas, pariatur reprehenderit ut minim.
+                    </div>
+                    <div>Sed ex proident pancetta elit chicken rump lorem sirloin, enim velit laboris. Ullamco eu
+                        frankfurter nostrud doner alcatra, id veniam shoulder filet mignon t-bone enim laboris deserunt
+                        brisket. Aliquip incididunt tail beef. Meatloaf leberkas tempor velit anim. Alcatra deserunt
+                        irure, esse ad filet mignon proident sint dolore magna.
+                    </div>
+                    <div>Excepteur jowl cupim biltong enim minim elit sunt. Ut adipisicing est voluptate tempor chicken
+                        laboris strip steak pig eiusmod bresaola leberkas. Irure shankle chicken, ad labore veniam flank
+                        cow swine. Turducken pig swine porchetta magna est.
+                    </div>
+                    <div>Ipsum venison dolor dolore chuck. Id adipisicing chicken tri-tip sint. Ground round veniam
+                        flank shankle consequat, in pork chop hamburger strip steak ut fugiat capicola shank. Aute
+                        dolore swine tri-tip t-bone do prosciutto dolore eu. Turkey duis occaecat, proident bacon aliqua
+                        hamburger mollit ad flank.
+                    </div>
+                    <div>Culpa anim velit pig irure, dolor sausage cupidatat meatball. Hamburger incididunt ipsum
+                        venison leberkas, pork belly exercitation aliquip chuck. T-bone eiusmod strip steak ground round
+                        kevin flank consectetur swine alcatra ullamco. Ipsum incididunt jerky in fatback dolore.
+                    </div>
+                    <div>Culpa velit andouille magna short ribs laboris, doner ut quis fatback voluptate est. Nisi
+                        salami sint short loin aliqua, jerky pork loin bresaola deserunt magna bacon qui. Nulla esse
+                        anim quis, tongue pork et velit pork belly adipisicing laboris dolor ball tip elit veniam. Filet
+                        mignon pork chop porchetta pariatur ground round cillum fugiat qui exercitation sed. Jowl
+                        landjaeger quis non pastrami. Fatback turducken kevin cillum reprehenderit, non et doner swine
+                        anim.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <button class="socialBtns"><i class="fa fa-github" aria-hidden="true"></i></button>
+            <button class="socialBtns"><i class="fa fa-twitter" aria-hidden="true"></i></button>
+            <button class="socialBtns"><i class="fa fa-instagram" aria-hidden="true"></i></button>
+        </footer>
+
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
