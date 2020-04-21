@@ -339,7 +339,7 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-   @media only screen and (min-height: 768px) {
+   @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     body {
         vertical-align: top;
