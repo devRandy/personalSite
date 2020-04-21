@@ -110,7 +110,7 @@ body {
 #rightContainer {
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     width: 60%;
     background-color: gainsboro;
     height: 100%;
@@ -121,10 +121,12 @@ body {
 }
 
 #rcTextBlock {
-    height: 30%;
-    max-height: 30%;
+    height: 50%;
+    max-height: 50%;
     vertical-align: middle;
     max-width: 80%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #rcTextBlock p {
@@ -197,16 +199,11 @@ body {
 
 #blogTab {
     display: none;
-    height: 100%;
-    width: 100%;
-    max-height: 100%;
-    max-width: 100%;
     overflow-y: scroll;
     color: #3d4a6e;
 }
 
 #blogTab > div {
-    margin: 10px;
     margin-left: 10%;
     margin-right: 10%;
     font-family: 'Josefin Sans', sans-serif;
@@ -229,7 +226,7 @@ body {
 footer {
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: -5;
     right: 0;
     height: 5%;
 }
@@ -241,6 +238,8 @@ footer {
     color: white;
     font-size: 32px;
     border: none;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 /*
  * Remove text-shadow in selection highlight:
@@ -434,6 +433,9 @@ textarea {
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
+    #leftContainer {
+        display: none;
+    }
 }
 
 @media print,
