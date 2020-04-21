@@ -86,7 +86,7 @@ body {
     width: 100%;
     max-height: 10%;
     background-color: #292929;
-    display: flex;
+    display: none;
     flex-flow: row;
     align-items: center;
     justify-content: center;
@@ -339,11 +339,15 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-   @media only screen and (max-width: 768px) {
+   @media only screen and (min-height: 768px) {
     /* For mobile phones: */
     body {
         vertical-align: top;
         padding-bottom: 10%;
+    }
+
+    .horizontal-flex {
+        display: flex;
     }
 
     #leftContainer {
@@ -377,10 +381,9 @@ textarea {
 
     #aboutTab {
         font-size: 20px;
-        margin-left: 10px;
-        margin-right: 10px;
         overflow-y: scroll;
-        max-height: 80%;
+        max-height: 700px;
+        max-width: 90%;
     }
 
     footer {
