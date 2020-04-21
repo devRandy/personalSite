@@ -135,6 +135,7 @@ body {
     max-height: 100%;
     min-width: 60%;
     min-height: 100%;
+    overflow-y: auto;
 }
 
 #rcTextBlock {
@@ -166,12 +167,28 @@ body {
     display: none;
     height: 100%;
     width: 100%;
+    padding: 5px;
 }
 
 #resumeTab object {
     min-width: 100%;
     min-height: 100%;
 }
+
+.resumeItem {
+    background-color: aqua;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    color: darkslateblue;
+    max-width: 100%;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.jobTitle {
+    font-weight: 500;
+}
+
 .center {
     margin: auto;
     width: 50%;
@@ -216,23 +233,26 @@ body {
 
 #aboutTab {
     display: none;
-    margin: 5px;
+    
+    margin-left: 10%;
+    margin-right: 10%;
     color: darkslateblue;
+    max-height: 950px;
 }
 
 .aboutText {
-    font-size: 26px;
+    font-size: 30px;
 }
 
-#blogTab::-webkit-scrollbar {
+#aboutTab::-webkit-scrollbar {
     width: .5em;
 }
 
-#blogTab::-webkit-scrollbar-track {
+#aboutTab::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
 
-#blogTab::-webkit-scrollbar-thumb {
+#aboutTab::-webkit-scrollbar-thumb {
     background-color: darkgrey;
     outline: 1px solid slategrey;
 }
@@ -381,9 +401,12 @@ textarea {
 
     #aboutTab {
         font-size: 20px;
-        overflow-y: scroll;
         max-height: 700px;
         max-width: 90%;
+    }
+
+    .aboutText {
+        font-size: medium;
     }
 
     footer {

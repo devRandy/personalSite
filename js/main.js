@@ -118,9 +118,8 @@ function changeRightContainer(option) {
             });
             break;
     }
+}
 
-    function test() {
-        console.log('test');
-    }
-
+function openJobModal() {
+    console.log("open Job modal called");
 }
