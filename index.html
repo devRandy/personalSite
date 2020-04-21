@@ -31,13 +31,19 @@
         <!-- Add your site or application content here -->
 
         <div class="flex-container">
+            <div id="mobileMenu" class="horizontal-flex">
+                <div><button title="Home" class="menuBtn" onclick="changeRightContainer('home')"><i class="fa fa-home" aria-hidden="true"></i></button></div>
+                <div><button title="Resume" class="menuBtn" onclick="changeRightContainer('profile')"><i class="fa fa-file-text-o" aria-hidden="true"></i></button></div>
+                <div><button title="About me" class="menuBtn" onclick="changeRightContainer('about')"><i class="fa fa-user" aria-hidden="true"></i></button></div>
+                <div><button title="Location" class="menuBtn" onclick="changeRightContainer('map')"><i class="fa fa-map-marker" aria-hidden="true"></i></button></div>
+            </div>
             <div id="leftContainer" >
                 <img src="img/img.jpg">
             </div>
             <div id="menu" class="vertical-flex">
                 <div><button title="Home" class="menuBtn" onclick="changeRightContainer('home')"><i class="fa fa-home" aria-hidden="true"></i></button></div>
                 <div><button title="Resume" class="menuBtn" onclick="changeRightContainer('profile')"><i class="fa fa-file-text-o" aria-hidden="true"></i></button></div>
-                <div><button title="About me" class="menuBtn" onclick="changeRightContainer('blog')"><i class="fa fa-user" aria-hidden="true"></i></button></div>
+                <div><button title="About me" class="menuBtn" onclick="changeRightContainer('about')"><i class="fa fa-user" aria-hidden="true"></i></button></div>
                 <div><button title="Location" class="menuBtn" onclick="changeRightContainer('map')"><i class="fa fa-map-marker" aria-hidden="true"></i></button></div>
             </div>
             <div id="rightContainer" >
@@ -57,29 +63,27 @@
                 <div id="mapTab">
                     <div id="mapid"></div>
                 </div>
-                <div id="blogTab">
+                <div id="aboutTab">
                     <h3>About me</h3>
-                    <div>
+                    <p class="aboutText">
                         I am a full time software developer with experience in full stack work. Already in my career I've learned
                         to work in a myriad of languages and technologies, such as Java, Javascript, Node/Express, Angular, C#, PowerShell,
                         Bash, Git, SVN, Maven, Jenkins, Bamboo, and much more. So far in my time as a developer the most valuable skill that
                         I have learned is how to learn on the job and how to apply it as quickly as possible. Almost everything I've learned
                         to do in the world of coding has been learned on the job as the demand for the work was needed. I never shy away from 
                         work that will teach me something new.
-                    </div>
-                    <br>
-                    <div>
+                    </p>
+                    <p class="aboutText">
                         On a personal level, I love gaming of every kind. I am an avid video and tabletop gamer. Some of my favorite board games
                         include Betrayal at House on The Hill, Suspicion, Coup, and Codenames. As for favorite video gamer, there are just too many to list,
                         but a few highlights are Halo, Mass Effect, Civilization, Slay the Spire, and Stardew Valley. I've even starting learning
                         some game development in Unity from watching YouTube tutorials.
-                    </div>
-                    <br>
-                    <div>
+                    </p>
+                    <p class="aboutText">
                         Outside of my digital life, I love animals and have 3 rescue pups of my own. I've volunteered at the Humane Society and plan to continue to do so.
                         Other than that, I just tend to my yard and to myself. Eventually I'll fit in fitness as well. But eating the best any city has to offer has been a 
                         more fulFILLing hobby.
-                    </div>
+                    </p>
                 </div>
             </div>
         </div>

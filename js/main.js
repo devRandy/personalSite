@@ -1,3 +1,8 @@
+var isMobile = false; //initiate as false
+// device detection
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    isMobile = true;
+   }
 function init() {
     Window.mymap = new L.map('mapid').setView([35.227772, -80.840916], 13);
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
@@ -20,9 +25,13 @@ function init() {
             .setLatLng([32.7836, -79.9372])
             .setContent('<p><strong>College of Charleston</strong> <br />BS in Computer Info Systems</p>'))
     });
+    var btnPosition = 'bottomleft';
+        if(isMobile){
+            btnPosition = 'topright';
+        }
     L.Control.zoomHome = L.Control.extend({
         options: {
-            position: 'bottomleft',
+            position: btnPosition,
             zoomInText: '<i class="fa fa-graduation-cap" style="line-height:1.65;"></i>',
             zoomInTitle: 'College',
             zoomHomeText: '<i class="fa fa-home" style="line-height:1.65;"></i>',
@@ -102,8 +111,8 @@ function changeRightContainer(option) {
             });
             Window.mymap.invalidateSize();
             break;
-        case 'blog':
-            $('#blogTab').css({
+        case 'about':
+            $('#aboutTab').css({
                 "display":"block",
                 "-webkit-animation": "fadein 2s"
             });

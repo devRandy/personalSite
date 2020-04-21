@@ -36,7 +36,7 @@ body {
 .flex-container {
     height: 90%;
     min-height: 90%;
-    max-height: 90% !important;
+    max-height: 90%;
     background-color: #3d4a6e;
     display: flex;
     flex-wrap: wrap;
@@ -73,6 +73,23 @@ body {
     max-width: 100%;
     max-height: 100%;
     margin: 0;
+}
+
+#mobileMenu {
+    display: none;
+    top: 0;
+    width: 100%;
+    max-height: 10%;
+}
+
+.horizontal-flex {
+    width: 100%;
+    max-height: 10%;
+    background-color: #292929;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .vertical-flex {
@@ -197,17 +214,14 @@ body {
     font: 16px'Lucida Console', Monaco, monospace;
 }
 
-#blogTab {
+#aboutTab {
     display: none;
-    overflow-y: scroll;
-    color: #3d4a6e;
+    margin: 5px;
+    color: darkslateblue;
 }
 
-#blogTab > div {
-    margin-left: 10%;
-    margin-right: 10%;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 20px;
+.aboutText {
+    font-size: 26px;
 }
 
 #blogTab::-webkit-scrollbar {
@@ -320,6 +334,61 @@ textarea {
 }
 
 /* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+   @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    body {
+        vertical-align: top;
+        padding-bottom: 10%;
+    }
+
+    #leftContainer {
+        display: none;
+    }
+    #menu {
+        display: none;
+    }
+    #mobileMenu {
+        display: flex;
+        background-color: #292929;
+    }
+
+    #mobileMenu > div {
+        height: 100%;
+    }
+
+    .menuBtn {
+        height: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #rightContainer {
+        width: 100%;
+    }
+
+    #rcTextBlock > p {
+        font-size: 26px;
+    }
+
+    #aboutTab {
+        font-size: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        overflow-y: scroll;
+        max-height: 80%;
+    }
+
+    footer {
+        bottom: 0;
+    }
+  }
+
+/* ==========================================================================
    Keyframes
    ========================================================================== */
 
@@ -328,15 +397,6 @@ textarea {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -425,18 +485,7 @@ textarea {
     clear: both;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-    #leftContainer {
-        display: none;
-    }
-}
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
