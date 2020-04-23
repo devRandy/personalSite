@@ -66,10 +66,11 @@ body {
     height: 100%;
     max-width: 100%;
     max-height: 100%;
+    background-color: gainsboro;
 }
 
 #leftContainer > img {
-    height: 90%;
+    height: auto;
     max-width: 100%;
     max-height: 100%;
     margin: 0;
@@ -412,6 +413,12 @@ textarea {
         font-size: medium;
     } */
   }
+
+  @media all and (max-width: 1024px) { 
+      #aboutTab {
+        max-height: 650px;
+      }
+   } 
 
 /* ==========================================================================
    Keyframes
