@@ -19,7 +19,7 @@ function init() {
     L.marker([35.227772, -80.840916]).addTo(Window.mymap).on('click', function (e) {
         Window.mymap.openPopup(L.popup()
             .setLatLng([35.227772, -80.840916])
-            .setContent('<p><strong>Synechron Uptown</strong> <br />Current seating location</p>'))
+            .setContent('<p><strong>Charlotte, NC</strong> <br />Current working location</p>'))
     });
     L.marker([32.7836, -79.9372]).addTo(Window.mymap).on('click', function (e) {
         Window.mymap.openPopup(L.popup()
