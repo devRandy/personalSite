@@ -1,122 +1,200 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Randy Jimenez</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="apple-touch-icon" href="icon.png">
-        <!-- Place favicon.ico in the root directory -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Randy Jimenez</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,400" rel="stylesheet">
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
-              integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
-              crossorigin=""/>
-        <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
-                integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
-                crossorigin=""></script>
-    </head>
-    <body onload="init()">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
 
-        <!--[if lte IE 9]>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+        integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+        integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+        crossorigin=""></script>
+</head>
+
+<body onload="init()">
+
+    <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
+    <!-- Add your site or application content here -->
 
-        <div class="flex-container">
-            <div id="mobileMenu" class="horizontal-flex">
-                <div><button title="Home" class="menuBtn" onclick="changeRightContainer('home')"><i class="fa fa-home" aria-hidden="true"></i></button></div>
-                <div><button title="Resume" class="menuBtn" onclick="changeRightContainer('profile')"><i class="fa fa-file-text-o" aria-hidden="true"></i></button></div>
-                <div><button title="About me" class="menuBtn" onclick="changeRightContainer('about')"><i class="fa fa-user" aria-hidden="true"></i></button></div>
-                <div><button title="Location" class="menuBtn" onclick="changeRightContainer('map')"><i class="fa fa-map-marker" aria-hidden="true"></i></button></div>
+    <div class="flex-container">
+        <div id="mobileMenu" class="horizontal-flex">
+            <div><button title="Home" class="menuBtn" onclick="changeRightContainer('home')"><i class="fa fa-home"
+                        aria-hidden="true"></i></button></div>
+            <div><button title="Resume" class="menuBtn" onclick="changeRightContainer('profile')"><i
+                        class="fa fa-file-text-o" aria-hidden="true"></i></button></div>
+            <div><button title="About me" class="menuBtn" onclick="changeRightContainer('about')"><i class="fa fa-user"
+                        aria-hidden="true"></i></button></div>
+            <div><button title="Location" class="menuBtn" onclick="changeRightContainer('map')"><i
+                        class="fa fa-map-marker" aria-hidden="true"></i></button></div>
+        </div>
+        <div id="leftContainer">
+            <img src="img/img.jpg">
+        </div>
+        <div id="menu" class="vertical-flex">
+            <div><button title="Home" class="menuBtn" onclick="changeRightContainer('home')"><i class="fa fa-home"
+                        aria-hidden="true"></i></button></div>
+            <div><button title="Resume" class="menuBtn" onclick="changeRightContainer('profile')"><i
+                        class="fa fa-file-text-o" aria-hidden="true"></i></button></div>
+            <div><button title="About me" class="menuBtn" onclick="changeRightContainer('about')"><i class="fa fa-user"
+                        aria-hidden="true"></i></button></div>
+            <div><button title="Location" class="menuBtn" onclick="changeRightContainer('map')"><i
+                        class="fa fa-map-marker" aria-hidden="true"></i></button></div>
+        </div>
+        <div id="rightContainer">
+            <div id="rcTextBlock">
+                <p id="name"><strong>Randy Jimenez</strong></p>
+                <p>Web Developer</p>
+                <hr>
+                <p>I am a professional software developer with experience in Javascript with Angular 2 and Java</p>
+                <p><i class="fa fa-phone" aria-hidden="true"></i> 8035221424</p>
+                <p><i class="fa fa-send" aria-hidden="true"></i> randyjimenez2010@gmail.com</p>
             </div>
-            <div id="leftContainer" >
-                <img src="img/img.jpg">
+            <div id="resumeTab">
+                <div class="resumeItem" onclick="openJobModal('vanguard')">
+                    <div class="jobTitle">Vanguard</div>
+                    <div>Developer 2</div>
+                </div>
+                <div class="resumeItem" onclick="openJobModal('synechron')">
+                    <div class="jobTitle">Synechron</div>
+                    <div>Associate Developer</div>
+                </div>
+                <div class="resumeItem" onclick="openJobModal('benz')">
+                    <div class="jobTitle">Mercedes-Benz</div>
+                    <div>IT Intern</div>
+                </div>
+                <div class="resumeItem" onclick="openJobModal('scra')">
+                    <div class="jobTitle">SCRA</div>
+                    <div>Programming Intern</div>
+                </div>
             </div>
-            <div id="menu" class="vertical-flex">
-                <div><button title="Home" class="menuBtn" onclick="changeRightContainer('home')"><i class="fa fa-home" aria-hidden="true"></i></button></div>
-                <div><button title="Resume" class="menuBtn" onclick="changeRightContainer('profile')"><i class="fa fa-file-text-o" aria-hidden="true"></i></button></div>
-                <div><button title="About me" class="menuBtn" onclick="changeRightContainer('about')"><i class="fa fa-user" aria-hidden="true"></i></button></div>
-                <div><button title="Location" class="menuBtn" onclick="changeRightContainer('map')"><i class="fa fa-map-marker" aria-hidden="true"></i></button></div>
+            <div id="mapTab">
+                <div id="mapid"></div>
             </div>
-            <div id="rightContainer" >
-                <div id="rcTextBlock">
-                    <p id="name"><strong>Randy Jimenez</strong></p>
-                    <p>Web Developer</p>
-                    <hr>
-                    <p>I am a professional software developer with experience in Javascript with Angular 2 and Java</p>
-                    <p><i class="fa fa-phone" aria-hidden="true"></i> 8035221424</p>
-                    <p><i class="fa fa-send" aria-hidden="true"></i> randyjimenez2010@gmail.com</p>
-                </div>
-                <div id="resumeTab">
-                    <div class="resumeItem" onclick="openJobModal()">
-                        <div class="jobTitle">Vanguard</div>
-                        <div>Developer 2</div>
-                    </div>
-                    <div class="resumeItem">
-                        <div class="jobTitle">Synechron</div>
-                        <div>Associate Developer</div>
-                    </div>
-                    <div class="resumeItem">
-                        <div class="jobTitle">Mercedes-Benz</div>
-                        <div>IT Intern</div>
-                    </div>
-                    <div class="resumeItem">
-                        <div class="jobTitle">SCRA</div>
-                        <div>Programming Intern</div>
-                    </div>
-                </div>
-                <div id="mapTab">
-                    <div id="mapid"></div>
-                </div>
-                <div id="aboutTab">
-                    <h3>About me</h3>
-                    <p class="aboutText">
-                        I am a full time software developer with experience in full stack work. Already in my career I've learned
-                        to work in a myriad of languages and technologies, such as Java, Javascript, Node/Express, Angular, C#, PowerShell,
-                        Bash, Git, SVN, Maven, Jenkins, Bamboo, and much more. So far in my time as a developer the most valuable skill that
-                        I have learned is how to learn on the job and how to apply it as quickly as possible. Almost everything I've learned
-                        to do in the world of coding has been learned on the job as the demand for the work was needed. I never shy away from 
-                        work that will teach me something new.
-                    </p>
-                    <p class="aboutText">
-                        On a personal level, I love gaming of every kind. I am an avid video and tabletop gamer. Some of my favorite board games
-                        include Betrayal at House on The Hill, Suspicion, Coup, and Codenames. As for favorite video gamer, there are just too many to list,
-                        but a few highlights are Halo, Mass Effect, Civilization, Slay the Spire, and Stardew Valley. I've even starting learning
-                        some game development in Unity from watching YouTube tutorials.
-                    </p>
-                    <p class="aboutText">
-                        Outside of my digital life, I love animals and have 3 rescue pups of my own. I've volunteered at the Humane Society and plan to continue to do so.
-                        Other than that, I just tend to my yard and to myself. Eventually I'll fit in fitness as well. But eating the best any city has to offer has been a 
-                        more fulFILLing hobby.
-                    </p>
-                </div>
+            <div id="aboutTab">
+                <h3>About me</h3>
+                <p class="aboutText">
+                    I am a full time software developer with experience in full stack work. Already in my career I've
+                    learned
+                    to work in a myriad of languages and technologies, such as Java, Javascript, Node/Express, Angular,
+                    C#, PowerShell,
+                    Bash, Git, SVN, Maven, Jenkins, Bamboo, and much more. So far in my time as a developer the most
+                    valuable skill that
+                    I have learned is how to learn on the job and how to apply it as quickly as possible. Almost
+                    everything I've learned
+                    to do in the world of coding has been learned on the job as the demand for the work was needed. I
+                    never shy away from
+                    work that will teach me something new.
+                </p>
+                <p class="aboutText">
+                    On a personal level, I love gaming of every kind. I am an avid video and tabletop gamer. Some of my
+                    favorite board games
+                    include Betrayal at House on The Hill, Suspicion, Coup, and Codenames. As for favorite video gamer,
+                    there are just too many to list,
+                    but a few highlights are Halo, Mass Effect, Civilization, Slay the Spire, and Stardew Valley. I've
+                    even starting learning
+                    some game development in Unity from watching YouTube tutorials.
+                </p>
+                <p class="aboutText">
+                    Outside of my digital life, I love animals and have 3 rescue pups of my own. I've volunteered at the
+                    Humane Society and plan to continue to do so.
+                    Other than that, I just tend to my yard and to myself. Eventually I'll fit in fitness as well. But
+                    eating the best any city has to offer has been a
+                    more fulFILLing hobby.
+                </p>
             </div>
         </div>
-        <footer>
-            <a class="socialBtns"><i class="fa fa-github" aria-hidden="true"></i></a>
-            <a class="socialBtns"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a class="socialBtns" href="https://www.instagram.com/randyjimenez2010/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        </footer>
+    </div>
+    <footer>
+        <a class="socialBtns"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a class="socialBtns"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a class="socialBtns" href="https://www.instagram.com/randyjimenez2010/" target="_blank"><i
+                class="fa fa-instagram" aria-hidden="true"></i></a>
+    </footer>
+    <div id="vanguardModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>May 2018 - Present</p>
+            <hr>
+            <ul>
+                <li>Modernized web certificate renewals with a script resulting in CI Integration</li>
+                <li>Led team NGA migration effort, resulting in 3 webapps being cloud hosted with CI functionality</li>
+                <li>Built proof of concept webapp to test Rest API calls using NodeJS with Express</li>
+                <li>Support of monolith applicationsacross various languages/technologies </li>
+            </ul>
+        </div>
+    </div>
+    <div id="syneModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p> January 2017 - May 2018</p>
+            <hr>
+            <ul>
+                <li>Built multiple proof of concept webapps from the ground up using Angular2 and Java in small teams of 2–3 resulting in new internal projects being started</li>
+                <li>Created REST API's for web	applications tied to Spring MVC with Maven</li>
+                <li>Initial creation of Mongo & MSSQL Dbs, alongside connecting wepapp backend to DBs</li>
+                <li>Lead a team of two in creating a proof of concept webapp to be presented to company directors</li>
+            </ul>
+        </div>
+    </div>
+    <div id="benzModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p> June 2016 - January 2017</p>
+            <hr>
+            <ul>
+                <li>Automated previously manual production processes resulting in a major reduction in man hours spent on the task using Visual Basic and C#</li>
+                <li>Implemented scripts that monitor and verify data for errors</li>
+                <li>Documented scripts, implementations, and test protocols for projects</li>
+                <li>Presented new concepts to executives for potential new project with the Microsoft HoloLens</li>
+            </ul>
+        </div>
+    </div>
+    <div id="scraModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p> Sept 2013 - June 2016</p>
+            <hr>
+            <ul>
+                <li>Experienced real world application of programming standards, such as MVC, version control, and agile methodologies</li>
+	            <li>Implemented features from API's, such as a User Support Ticket System, GPS Coordinate Tracking, and Twitter OAuth</li>
+	            <li>Added new webpages with JavaScript functionality to a preexisting web application</li>
+	            <li>Tested applications for performance and stability with load testing and performance testing which led to removing redundant code</li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 
-        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
 
-        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-        <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-    </body>
 </html>

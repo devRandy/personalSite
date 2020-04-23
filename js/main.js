@@ -2,7 +2,8 @@ var isMobile = false; //initiate as false
 // device detection
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     isMobile = true;
-   }
+}
+
 function init() {
     Window.mymap = new L.map('mapid').setView([35.227772, -80.840916], 13);
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
@@ -120,6 +121,57 @@ function changeRightContainer(option) {
     }
 }
 
-function openJobModal() {
-    console.log("open Job modal called");
+function openJobModal(option) {
+    switch(option) {
+        case 'vanguard':
+            $('#vanguardModal').css({
+                "display":"block",
+                "-webkit-animation": "fadein 1s"
+            });
+            break;
+        case 'synechron':
+            $('#syneModal').css({
+                "display":"block",
+                "-webkit-animation": "fadein 1s"
+            });
+            break;
+        case 'benz':
+            $('#benzModal').css({
+                "display":"block",
+                "-webkit-animation": "fadein 1s"
+            });
+            break;
+        case 'scra':
+            $('#scraModal').css({
+                "display":"block",
+                "-webkit-animation": "fadein 1s"
+            });
+            break;
+    }
+}
+
+// // Get the modal
+var modal = document.getElementById("vanguardModal");
+
+// // Get the button that opens the modal
+// var btn = document.getElementById("myBtn");
+
+// // Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// // When the user clicks on the button, open the modal
+// btn.onclick = function() {
+//   modal.style.display = "block";
+// }
+
+// // When the user clicks on <span> (x), close the modal
+$( ".modal" ).click(function() {
+    $(".modal").css({"display":"none"})
+  });
+
+// // When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
